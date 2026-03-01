@@ -4,9 +4,9 @@
   "description": "Secure MCP server for ClawCoded agent - NEAR Market integration",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/http-server.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/http-server.js",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
@@ -19,7 +19,11 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.6",
     "dotenv": "^16.4.5",
+    "express": "^5.2.1",
     "viem": "^2.21.50",
     "zod": "^3.23.8",
     "zod-to-json-schema": "^3.25.1"

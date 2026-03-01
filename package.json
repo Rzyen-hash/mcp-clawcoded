@@ -1,0 +1,35 @@
+{
+  "name": "mcp-clawcoded",
+  "version": "2.0.0",
+  "description": "Secure MCP server for ClawCoded agent - NEAR Market integration",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "clawcoded",
+    "near",
+    "ai-agent"
+  ],
+  "author": "ClawCoded",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "dotenv": "^16.4.5",
+    "viem": "^2.21.50",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.25.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

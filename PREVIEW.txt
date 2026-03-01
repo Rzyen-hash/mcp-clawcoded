@@ -1,0 +1,182 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║           🤖 CLAWCODED MCP SERVER v2.0.0 - PRE-REVIEW                        ║
+║           Hybrid: FREE + PAID (x402)                                        ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📦 PROJECT OVERVIEW
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Repository: /root/.openclaw/workspace/mcp-clawcoded/                       │
+│  Language: TypeScript                                                       │
+│  Runtime: Node.js 18+                                                       │
+│  Protocol: MCP (Model Context Protocol)                                     │
+│  Transport: Stdio (default) / HTTP (Railway)                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+🎯 ARCHITECTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+                    ┌──────────────────────┐
+                    │   AGENT LAIN / CLI   │
+                    └──────────┬───────────┘
+                               │
+                    ┌──────────▼───────────┐
+                    │  MCP Hybrid Server   │
+                    │   Port: 3000         │
+                    └──────────┬───────────┘
+                               │
+         ┌─────────────────────┼─────────────────────┐
+         │                     │                     │
+         ▼                     ▼                     ▼
+┌─────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+│  FREE TOOLS (5) │  │  PAID TOOLS (8)  │  │   x402 SYSTEM    │
+│  (No Payment)   │  │  (x402 Payment)  │  │  Payment Verify  │
+└────────┬────────┘  └────────┬─────────┘  └────────┬─────────┘
+         │                    │                     │
+         ▼                    ▼                     ▼
+┌─────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+│ Internal Logic  │  │ External APIs    │  │  Base Mainnet    │
+│ No API Key      │  │ CoinGecko        │  │  On-chain Verify │
+│                 │  │ DexScreener      │  │                  │
+└─────────────────┘  └──────────────────┘  └──────────────────┘
+
+🆓 FREE TOOLS (No Payment Required)
+═══════════════════════════════════════════════════════════════════════════════
+
+┌────┬─────────────────────┬──────────────────────────────────────────────────┐
+│ No │ Tool Name           │ Description                                      │
+├────┼─────────────────────┼──────────────────────────────────────────────────┤
+│ 1  │ calculate           │ Basic math: add, subtract, multiply, divide, %   │
+│ 2  │ format_number       │ Format with currency symbols ($, Ξ, ₿, Ⓝ)       │
+│ 3  │ time_converter      │ Unix ↔ Human readable dates                      │
+│ 4  │ risk_calculator     │ Position size, risk %, risk/reward ratio         │
+│ 5  │ compound_interest   │ Crypto investment compound returns               │
+└────┴─────────────────────┴──────────────────────────────────────────────────┘
+
+💰 PAID TOOLS (x402 Payment Required)
+═══════════════════════════════════════════════════════════════════════════════
+
+┌────┬───────────────────────────┬───────────┬────────────────────────────────┐
+│ No │ Tool Name                 │ Price     │ Data Source                    │
+├────┼───────────────────────────┼───────────┼────────────────────────────────┤
+│ 1  │ check_token_price         │ 0.01 USDC │ DexScreener API                │
+│ 2  │ assess_liquidity_risk     │ 0.02 USDC │ DexScreener API                │
+│ 3  │ check_token_age           │ 0.01 USDC │ DexScreener API                │
+│ 4  │ get_coin_profile          │ 0.02 USDC │ CoinGecko API                  │
+│ 5  │ research_market           │ 0.05 USDC │ CoinGecko API                  │
+│ 6  │ get_price_history         │ 0.03 USDC │ CoinGecko API                  │
+│ 7  │ check_exchange            │ 0.02 USDC │ CoinGecko API                  │
+│ 8  │ portfolio_valuation       │ 0.05 USDC │ CoinGecko API                  │
+└────┴───────────────────────────┴───────────┴────────────────────────────────┘
+
+💵 REVENUE MODEL
+═══════════════════════════════════════════════════════════════════════════════
+
+Tool Usage → x402 Payment → Base Mainnet → Your Wallet
+                ↓
+           0.01-0.05 USDC per call
+                ↓
+    ┌─────────────────────────────┐
+    │   Revenue Projection        │
+    ├─────────────────────────────┤
+    │  100 calls/day  = $1/day    │
+    │  1,000 calls/day = $10/day  │
+    │  10,000 calls/day = $100/day│
+    └─────────────────────────────┘
+
+🔐 SECURITY FEATURES
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Wallet Auth (SIWE - Sign-In with Ethereum)
+✅ Rate Limiting (100 req/min default)
+✅ Input Validation (Zod schemas)
+✅ Data Sanitization (prevents injection)
+✅ Log Redaction (sensitive data hidden)
+✅ No Private Keys Exposed
+✅ Type-Safe (TypeScript)
+
+📁 FILE STRUCTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+mcp-clawcoded/
+├── 📄 src/
+│   ├── 📄 index.ts              # Entry point
+│   ├── 📄 server-hybrid.ts      # Main hybrid server (FREE + PAID)
+│   ├── 📄 server-x402.ts        # x402-only server
+│   ├── 📄 server.ts             # Basic server
+│   ├── 📄 types.ts              # Type definitions
+│   ├── 📂 tools/
+│   │   ├── 📄 crypto-tools.ts   # 8 PAID tools
+│   │   ├── 📄 free-tools.ts     # 5 FREE tools
+│   │   ├── 📄 near-market.ts    # (unused)
+│   │   └── 📄 index.ts          # Exports
+│   └── 📂 utils/
+│       ├── 📄 auth.ts           # Wallet authentication
+│       ├── 📄 validation.ts     # Input sanitization
+│       └── 📄 x402.ts           # Payment protocol
+├── 📄 package.json              # Dependencies
+├── 📄 tsconfig.json             # TypeScript config
+├── 📄 .env.example              # Environment template
+├── 📄 .gitignore                # Git ignore rules
+├── 📄 README.md                 # Documentation
+└── 📄 X402-GUIDE.md             # x402 payment guide
+
+🔄 WORKFLOW: FREE TOOL
+═══════════════════════════════════════════════════════════════════════════════
+
+Agent Request
+      ↓
+┌─────────────┐
+│ Is PAID?    │──NO──▶ Execute Tool Immediately
+└─────────────┘            ↓
+                    Return Result (FREE)
+
+🔄 WORKFLOW: PAID TOOL
+═══════════════════════════════════════════════════════════════════════════════
+
+Agent Request
+      ↓
+┌─────────────┐
+│ Is PAID?    │──YES──▶ Require Payment (402)
+└─────────────┘            ↓
+                    ┌──────────────────┐
+                    │ Payment Details  │
+                    │ - Amount         │
+                    │ - Token (USDC)   │
+                    │ - Address        │
+                    └──────────────────┘
+                              ↓
+                    Agent Pays On-Chain
+                              ↓
+                    Send txHash + paymentId
+                              ↓
+                    ┌──────────────────┐
+                    │ Verify On-Chain  │
+                    │ - Check receipt  │
+                    │ - Validate amt   │
+                    └──────────────────┘
+                              ↓
+                    Execute Tool
+                              ↓
+                    Return Result (PAID)
+
+🚀 DEPLOYMENT READY
+═══════════════════════════════════════════════════════════════════════════════
+
+Status: ✅ READY TO DEPLOY
+
+Steps to Deploy:
+1. Build: npm run build
+2. Push to GitHub
+3. Connect Railway
+4. Set env vars
+5. Deploy!
+
+Estimated Time: 5-10 minutes
+
+═══════════════════════════════════════════════════════════════════════════════
+                         END OF PRE-REVIEW
+═══════════════════════════════════════════════════════════════════════════════

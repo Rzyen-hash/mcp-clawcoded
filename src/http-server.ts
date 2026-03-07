@@ -77,6 +77,24 @@ app.post('/message', async (req, res) => {
   res.json({ status: 'received' });
 });
 
+// AIProx compatible endpoint
+app.post('/v1/invoke', async (req, res) => {
+  console.log('[AIProx] Received task');
+  
+  const { task, job_id } = req.body;
+  
+  // Handle ping during registration
+  if (task === 'ping') {
+    return res.json({ result: 'pong' });
+  }
+  
+  // Process the task - for now, return a simple response
+  // In production, this would call the AI agent
+  const result = `Task received: ${task}. Job ID: ${job_id}. ClawCoded at your service!`;
+  
+  res.json({ result });
+});
+
 // Start HTTP server
 app.listen(PORT, () => {
   console.log('╔════════════════════════════════════════╗');
